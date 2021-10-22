@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor">
+          <span class="icon-menu" id="btn-menu"></span>
+          <nav class="nav" id="nav">
+            <ul class="menu">
+              <li class="menu__item"><a  class="menu__link" href="#">Pagina 1</a></li>
+              <li class="menu__item"><a  class="menu__link" href="#">Pagina 2 </a></li>
+              <li class="menu__item"><a  class="menu__link" href="#">Pagina 3</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </header>    
+
+<img src="3.jpg" alt="">
+<br>
+<p>Pac Man (パックマン Pakku Man) es un videojuego arcade creado por el diseñador de videojuegos Toru Iwatani de la empresa Namco, y distribuido por Midway Games al mercado estadounidense a principios de los años 1980.
+
+    Desde que Pac-Man fue lanzado el 22 de mayo de 1980,3​ fue un éxito. Se convirtió en un fenómeno mundial en la industria de los videojuegos, llegó a tener el récord Guiness del videojuego de arcade más exitoso de todos los tiempos con un total de 293 822 máquinas vendidas desde 1981 hasta 1987 y acabó con el dominio de Space Invaders, donde la acción predominante era shoot 'em up (disparar a todos) para reemplazarla por un formato único, más humorístico y poco violento que gustó a muchísimas personas. "Todos los juegos que estaban disponibles en ese entonces -fines de los 70- eran de tipo violento, de guerra o como el Space Invaders", recordó en una entrevista Iwatani, agregando que "no había juegos que todos pudieran disfrutar, y especialmente no había ninguno para mujeres. Quería hacer un juego 'cómico' que las mujeres pudiesen disfrutar".</p>
+
+
+    <script type="text/javascript">
+        var btnMenu = document.getElementById('btn-menu');
+        var nav = document.getElementById('nav');
+        btnMenu.addEventListener('click',function(){
+        nav.classList.toggle('muestrate');
+})
+    </script>
+</body>
+</html>
