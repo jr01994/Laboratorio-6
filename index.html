@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/estilos.css" rel="stylesheet" type="text/css"/>
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #392338" onload="startTime()">
 
     <header class="header">
         <div class="contenedor">
           <span class="icon-menu" id="btn-menu"></span>
           <nav class="nav" id="nav">
             <ul class="menu">
-              <li class="menu__item"><a  class="menu__link" href="#">Pagina 1</a></li>
-              <li class="menu__item"><a  class="menu__link" href="#">Pagina 2 </a></li>
-              <li class="menu__item"><a  class="menu__link" href="#">Pagina 3</a></li>
-              
+              <li class="menu__item"><a  class="menu__link" href="index.html">Index</a></li>
+              <li class="menu__item"><a  class="menu__link" href="Pagina1.html">Pagina 1</a></li>
+              <li class="menu__item"><a  class="menu__link" href="Pagina2.html">Pagina 2 </a></li>
+              <li class="menu__item"><a  class="menu__link" href="Pagina3.html">Pagina 3</a></li>
             </ul>
           </nav>
         </div>
       </header>    
+      
+      <br>
+    </section> 
+    <div class="infoo">
+    <div class="caja" ><center><h1>INDEX</h1></center><hr><br>
+</main>
+</div></div>
+
+        </div>
+    </div>
+    <br>
+    <div id="clockdate">
+      <div class="clockdate-wrapper">
+        <div id="clock"></div>
+        <div id="date"></div>
+      </div>
+    </div><br>
 
 <img src="3.jpg" alt="">
 <br>
@@ -36,5 +54,39 @@
         nav.classList.toggle('muestrate');
 })
     </script>
+
+<script>
+  function startTime() {
+  var today = new Date();
+  var hr = today.getHours();
+  var min = today.getMinutes();
+  var sec = today.getSeconds();
+  ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+  hr = (hr == 0) ? 12 : hr;
+  hr = (hr > 12) ? hr - 12 : hr;
+  //Add a zero in front of numbers<10
+  hr = checkTime(hr);
+  min = checkTime(min);
+  sec = checkTime(sec);
+  document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+  
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var curWeekDay = days[today.getDay()];
+  var curDay = today.getDate();
+  var curMonth = months[today.getMonth()];
+  var curYear = today.getFullYear();
+  var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+  document.getElementById("date").innerHTML = date;
+  
+  var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+  if (i < 10) {
+      i = "0" + i;
+  }
+  return i;
+}
+</script>
 </body>
 </html>
